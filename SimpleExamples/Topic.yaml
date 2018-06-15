@@ -1,4 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
+Description: >
+    Topic for sending emails 
 # created by wolfgang unger - 6.2018
 
 Resources:

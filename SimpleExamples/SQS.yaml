@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: 2010-09-09
+# created by wolfgang unger - 6.2018
+
+Resources:
+  MyQueue:
+   Type: AWS::SQS::Queue
+   Properties:
+    QueueName: "queue1"
+    VisibilityTimeout: 30
+    DelaySeconds: 1
+    #FifoQueue: true
+    #KmsMasterKeyId: String
+    #KmsDataKeyReusePeriodSeconds: Integer
+    #MaximumMessageSize: Integer
+    #MessageRetentionPeriod: Integer
+
+
+
+

@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: 2010-09-09
+# created by wolfgang unger - 6.2018
+
+Resources:
+  MyTopic:
+    Type: "AWS::SNS::Topic"
+    Properties: 
+      DisplayName: UngerwTopic1
+      Subscription: 
+        -  Endpoint: "wolfgang.unger@nttdata.com"
+           Protocol: "email"
+      TopicName: UngerwTopic1
+
+
+
+

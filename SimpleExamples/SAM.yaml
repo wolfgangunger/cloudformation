@@ -1,0 +1,21 @@
+
+Description: >
+    SAM Function
+# Wolfgang Unger 1.6.2018 
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Resources:
+  MySQSFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: com.unw.demo.LambdaFunctionHandler
+      Runtime: java8
+      #Policies: LambdaServiceRole
+      Policies: AWSLambdaFullAccess
+      #CodeUri: 's3://my-bucket/function.zip'
+      #CodeUri: 's3://eu-central-1.amazonaws.com/cf-templates-btx0hqlvwdq-eu-central-1/sqs1-1.0.0.jar'
+      CodeUri: 's3://eu-central-1.amazonaws.com/cf-templates-btx0hqlvwdq-eu-central-1/MyFunction.zip'
+
+
+
+

@@ -1,0 +1,40 @@
+
+Description: >
+    SAM Role
+# Wolfgang Unger 1.6.2018 
+
+Resources:    
+   ServiceRole:
+        Type: AWS::IAM::Role
+        Properties:
+            RoleName: LambdaServiceRole
+            Path: /
+            AssumeRolePolicyDocument: |
+                {
+                    "Statement": [{
+                        "Effect": "Allow",
+                        "Principal": { "Service": [ "ecs.amazonaws.com" ]},
+                        "Action": [ "sts:AssumeRole" ]
+                    }]
+                }
+            Policies:
+                - PolicyName: LambdaServiceRole
+                  PolicyDocument:
+                    {
+                        "Version": "2012-10-17",
+                        "Statement": [{
+                                "Effect": "Allow",
+                                "Action": [
+                                    "dynamodb:*",
+                                    "s3:*",
+                                    "sqs:*",
+                                    "lambda:*"
+                                ],
+                                "Resource": "*"
+                        }]
+                    }
+
+
+
+
+
